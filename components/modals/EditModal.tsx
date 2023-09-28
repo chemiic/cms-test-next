@@ -162,7 +162,7 @@ const EditModal = () => {
                             ${values.discount==0 ?
                                 (values.price * values.count)
                                 :
-                                ((values.price * values.discount) - (values.price * values.count) * (values.discount / 100))
+                                values.price * values.count - ((values.price * values.count) * values.discount / 100)
                             }
                           </span></p>
                         <BaseButton
