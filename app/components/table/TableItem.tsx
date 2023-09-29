@@ -37,8 +37,8 @@ const TableItem: FC<TableItemProps> = ({product}) => {
                 progress: undefined,
                 theme: "light",
             });
+            router.refresh()
         }
-        router.refresh()
     }
     const onEdit: MouseEventHandler<HTMLButtonElement> = async (e)=>{
         e.preventDefault()

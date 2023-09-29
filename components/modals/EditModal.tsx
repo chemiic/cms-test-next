@@ -60,9 +60,9 @@ const EditModal = () => {
                 progress: undefined,
                 theme: "light",
             });
+            router.refresh()
+            onClose()
         }
-        router.refresh()
-        onClose()
     }
 
     return(

@@ -1,5 +1,5 @@
-import {NextPage} from "next";
 
+import {NextPage} from "next";
 import Header from "./components/Header";
 import Table from "./components/table/Table";
 import getProducts from "../actions/Api/getProducts";
@@ -7,7 +7,14 @@ import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const HomePage: NextPage = async () => {
-    const products =  await getProducts();
+    // const [products, setProducts] = useState(await getProducts())
+    // useEffect(()=>{
+    //     getProducts().then(items=>{
+    //         setProducts(items)
+    //     })
+    // })
+    const products = await getProducts();
+
   return (
         <>
             <ToastContainer

@@ -54,10 +54,10 @@ const AddModal = () => {
                 progress: undefined,
                 theme: "light",
             });
+            router.refresh()
+            setValues(inputsData)
+            onClose()
         }
-        router.refresh()
-        setValues(inputsData)
-        onClose()
     }
     return(
         <div className={`z-50 fixed h-full top-0 bottom-0 left-0 right-0 backdrop-blur-xl items-center justify-center ${isOpenModal ? 'flex' : 'hidden'}` }>
