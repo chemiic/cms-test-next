@@ -30,9 +30,6 @@ const AddModal = () => {
         image: ''
     }
     const [values, setValues] = useState(inputsData)
-    useEffect(()=>{
-        setValues(inputsData)
-    })
     const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
         setValues({
