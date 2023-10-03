@@ -4,7 +4,7 @@ const getProducts =  async () => {
         const res  = await axios.get(`https://marshy-foamy-fenugreek.glitch.me/api/goods`);
         return res.data;
     } catch (e) {
-        return  {
+        return  [{
             id: 'Ошибка загрузки',
             title: 'Ошибка загрузки',
             description: 'Ошибка загрузки',
@@ -14,7 +14,7 @@ const getProducts =  async () => {
             count: 0,
             discount: 0,
             image: ''
-        }
+        }]
     }
 }
 export default getProducts;

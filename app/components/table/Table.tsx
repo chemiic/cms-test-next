@@ -3,10 +3,8 @@ import TableBody from "./TableBody";
 import TableHeader from "./TableHeader";
 import TableFooter from "./TableFooter";
 import {Product} from "../../../types/types";
-import {type FC, useMemo, useState, SetStateAction} from 'react';
-import {useError} from "../../../hooks/useError";
-import {useModal} from "../../../hooks/useModal";
-import {ToastContainer} from "react-toastify";
+import {type FC, useState, SetStateAction} from 'react';
+
 interface TableProps {
     products: Product[];
 }
