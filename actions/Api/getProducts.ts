@@ -1,7 +1,7 @@
 import axios from 'axios'
 const getProducts =  async () => {
     try {
-        const res  = await axios.get(`https://marshy-foamy-fenugreek.glitch.me/api/goods`);
+        const res  = await axios.get(`https://marshy-foamy-fenugreek.glitch.me/api/goods` );
         return res.data;
     } catch (e) {
         return  [{
