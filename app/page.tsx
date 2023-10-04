@@ -1,12 +1,22 @@
+'use client'
+
 import {NextPage} from "next";
 import Header from "./components/Header";
 import Table from "./components/table/Table";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import getProducts from "../actions/Api/getProducts";
+import {useEffect, useState} from "react";
+import {Product} from "../types/types";
 
 const HomePage: NextPage =  async () => {
-    const products = await getProducts()
+    const [products,setProducts] = useState(Array<Product>)
+    useEffect(()=>{
+        fetch(`https://marshy-foamy-fenugreek.glitch.me/api/goods`)
+            .then(response => response.json())
+            .then(json => setProducts(json))
+            .catch(e=>console.log(e))
+    },[])
     return (
         <>
             <ToastContainer
